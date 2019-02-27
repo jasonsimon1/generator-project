@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Generator Project</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function() {
+
+            $('button').click(function() {
+                var name = $('#name').val();
+                var title = $('#title').val();
+                $('cover').css("background-color")
+            });
+        });
+    </script>
+    <style>
+        cover {
+            background-color: black;
+            color: white;
+            width: 300px;
+            /*padding: 20px;
+            margin: 20px 0;*/
+        }
+    </style>
+</head>
+
+<body>
+
+    Name: <input id="name"><br> Title: <input id="title"><br>
+    <button> Generate Album Cover!</button>
+</body>
+
+</html>
