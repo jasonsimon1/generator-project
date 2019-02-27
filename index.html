@@ -8,15 +8,21 @@
     <script>
         $(function() {
 
+            $('c').css("background-color", "red")
             $('button').click(function() {
                 var name = $('#name').val();
                 var title = $('#title').val();
-                $('cover').css("background-color")
+
             });
+
+            $('#reset').click(function() {
+                $('c').show(10);
+            });
+
         });
     </script>
     <style>
-        cover {
+        c {
             background-color: black;
             color: white;
             width: 300px;
@@ -30,6 +36,7 @@
 
     Name: <input id="name"><br> Title: <input id="title"><br>
     <button> Generate Album Cover!</button>
+    <input id="reset" type="button" value="reset">
 </body>
 
 </html>
