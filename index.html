@@ -12,11 +12,12 @@
             $('button').click(function() {
                 var name = $('#name').val();
                 var title = $('#title').val();
+                var color = $("#color").val ();
 
             });
 
             $('#reset').click(function() {
-                $('c').show(10);
+                $('#name').show(10);
             });
 
         });
@@ -29,12 +30,18 @@
             /*padding: 20px;
             margin: 20px 0;*/
         }
+        
+        h1 {
+            color:red;
+        }
     </style>
 </head>
 
 <body>
-
-    Name: <input id="name"><br> Title: <input id="title"><br>
+    <h1>Create your own album cover!</h1>
+    Name: <input id="name"><br> 
+    Title: <input id="title"><br> 
+    Color: <input id="color"><br>
     <button> Generate Album Cover!</button>
     <input id="reset" type="button" value="reset">
 </body>
