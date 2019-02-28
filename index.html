@@ -8,40 +8,49 @@
     <script>
         $(function() {
 
-            $('c').css("background-color", "red")
+
             $('button').click(function() {
                 var name = $('#name').val();
                 var title = $('#title').val();
-                var color = $("#color").val ();
+                var color = $("#color").val();
+
+               
+                $('h2').text("name", name)
+                $('h2').css("background-color", color)
+                
+
+                //$("c").css('color', color);
 
             });
 
             $('#reset').click(function() {
                 $('#name').show(10);
+                $('#title').show(10);
+                $('color').show(10);
             });
 
         });
     </script>
     <style>
-        c {
+        h1 {
+            color: red;
+        }
+
+        h2 {
             background-color: black;
             color: white;
-            width: 300px;
-            /*padding: 20px;
-            margin: 20px 0;*/
-        }
-        
-        h1 {
-            color:red;
+            height:150px;
+            width: 150px;
+            padding: 20px;
+            margin: 20px 0;
         }
     </style>
 </head>
 
 <body>
     <h1>Create your own album cover!</h1>
-    Name: <input id="name"><br> 
-    Title: <input id="title"><br> 
-    Color: <input id="color"><br>
+    <h2> YOUR ALBUM COVER WILL BE GENERATED RIGHT HERE! </h2>
+    Name: <input id="name"><br> Title: <input id="title"><br> Color: <input id="color"><br>
     <button> Generate Album Cover!</button>
     <input id="reset" type="button" value="reset">
 </body>
