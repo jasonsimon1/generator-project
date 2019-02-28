@@ -10,24 +10,21 @@
 
 
             $('button').click(function() {
-                var name = $('#name').val();
                 var title = $('#title').val();
+                var name = $('#name').val();
                 var color = $("#color").val();
 
-               
-                $('h2').text("name", name)
-                $('h2').css("background-color", color)
-                
+                var album = title + " album by " + name;
 
-                //$("c").css('color', color);
+
+                // $('p').text("Title Here", title)
+                //  $('p').text("album by:", name)
+                $('p').css("background-color", color)
+                $('p').html(album);
 
             });
 
-            $('#reset').click(function() {
-                $('#name').show(10);
-                $('#title').show(10);
-                $('color').show(10);
-            });
+
 
         });
     </script>
@@ -36,10 +33,11 @@
             color: red;
         }
 
-        h2 {
-            background-color: black;
+        p {
+            background-color: pink;
+            text-align: center;
             color: white;
-            height:150px;
+            height: 150px;
             width: 150px;
             padding: 20px;
             margin: 20px 0;
@@ -49,10 +47,9 @@
 
 <body>
     <h1>Create your own album cover!</h1>
-    <h2> YOUR ALBUM COVER WILL BE GENERATED RIGHT HERE! </h2>
+    <p></p>
     Name: <input id="name"><br> Title: <input id="title"><br> Color: <input id="color"><br>
     <button> Generate Album Cover!</button>
-    <input id="reset" type="button" value="reset">
 </body>
 
 </html>
